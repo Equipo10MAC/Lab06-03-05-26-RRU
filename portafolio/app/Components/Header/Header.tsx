@@ -1,41 +1,62 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './Header.module.css';
 
-let HeaderData:String = 'Rodrigo Rojas Uriostigue'
+let HeaderData: string = 'Rodrigo Rojas Uriostigue';
 
-export default function Header (){
+export default function Header() {
     return (
-        <><header className="header" id="header">
-        <nav className="nav container">
-            <a href="#home" className="nav__logo">
-                <span className="logo__bracket">&lt;</span>TuNombre<span className="logo__bracket">/&gt;</span>
-            </a>
-            <input type="checkbox" id="nav-toggle" className="nav__checkbox"/>
-                <i className="fas fa-bars"></i>
-            
-            <div className="nav__menu" id="nav-menu">
-                    <i className="fas fa-times"></i>
-                
-                <ul className="nav__list">
-                    <li className="nav__item">
-                            <a href="#home" className="nav__link">Inicio</a>
-                    </li>
-                    <li className="nav__item">
-                            <a href="#interests" className="nav__link">Intereses</a>
-                    </li>
-                    <li className="nav__item">
-                            <a href="#cv" className="nav__link">CV</a>
-                    </li>
-                    <li className="nav__item">
-                            <a href="#projects" className="nav__link">Proyectos</a>
-                    </li>
-                    <li className="nav__item">
-                            <a href="#contact" className="nav__link">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header></>
+        <>
+            <header className={styles.header} id="header">
+                <nav className={`container ${styles.nav}`}>
+                    <Link href="#home" className={styles.nav__logo}>
+                        <span className={styles.logo__bracket}>&lt;</span>Rodrigo Rojas Uriostigue<span className={styles.logo__bracket}>/&gt;</span>
+                    </Link>
+                    
+                    <input type="checkbox" id="nav-toggle" className={styles.nav__checkbox}/>
+                    <label htmlFor="nav-toggle" className={styles.nav__toggle}>
+                        <i className="fas fa-bars"></i>
+                    </label>
+
+                    <div className={styles.nav__menu} id="nav-menu">
+                        <label htmlFor="nav-toggle" className={styles.nav__close}>
+                            <i className="fas fa-times"></i>
+                        </label>
+
+                        <ul className={styles.nav__list}>
+                            <li className={styles.nav__item}>
+                                <label htmlFor="nav-toggle">
+                                    <Link href="#home" className={styles.nav__link}>Inicio</Link>
+                                </label>
+                            </li>
+
+                            <li className={styles.nav__item}>
+                                <label htmlFor="nav-toggle">
+                                    <Link href="#interests" className={styles.nav__link}>Intereses</Link>
+                                </label>
+                            </li>
+
+                            <li className={styles.nav__item}>
+                                <label htmlFor="nav-toggle">
+                                    <Link href="#cv" className={styles.nav__link}>CV</Link>
+                                </label>
+                            </li>
+
+                            <li className={styles.nav__item}>
+                                <label htmlFor="nav-toggle">
+                                    <Link href="#projects" className={styles.nav__link}>Proyectos</Link>
+                                </label>
+                            </li>
+
+                            <li className={styles.nav__item}>
+                                <label htmlFor="nav-toggle">
+                                    <Link href="#contact" className={styles.nav__link}>Contacto</Link>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </>
     );
 }
-

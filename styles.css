@@ -3,37 +3,12 @@
    Autor: Tu Nombre
    Versión: 1.0 (EJERCICIO CON ERRORES)
    ========================================
-   
-   ¡¡¡ EJERCICIO PARA ESTUDIANTES !!!
-   
-   Este archivo contiene ERRORES INTENCIONALES que debes encontrar y corregir.
-   
-   INSTRUCCIONES:
-   1. Busca los comentarios que comienzan con "ERROR #" para encontrar los problemas
-   2. Lee la PISTA para entender qué está mal
-   3. Si el error es AVANZADO, la SOLUCIÓN completa está incluida
-   4. Corrige el código y observa los cambios en el navegador
-   
-   TOTAL DE ERRORES EN CSS: 18
-   - Errores simples (solo pista): 13
-   - Errores avanzados (con solución): 5
-   
-   TEMAS QUE PRACTICARÁS:
-   - Variables CSS
-   - Flexbox y Grid
-   - Box model (margin, padding, border-radius)
-   - Transiciones y animaciones
-   - Selectores (incluyendo pseudoclases y pseudoelementos)
-   - Z-index y posicionamiento
-   
-   ¡Buena suerte!
-   ======================================== */
-
 /* ========== VARIABLES CSS ========== */
 :root {
     /* Colores principales */
     /* ERROR 1: El color primario no es el correcto, debería ser un cyan vibrante
        PISTA: Revisa el valor hexadecimal, el original era un tono cyan (#0ea5e9) */
+       
     --color-primary: #ff0000;          /* Cyan vibrante */
     --color-primary-dark: #0284c7;
     --color-primary-light: #38bdf8;
